@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { RootLayoutProps } from "@/interfaces/layout/RootLayoutProps";
 import { cn } from "@/lib/utils";
+import Navbar from "@/components/shared/Navbar";
 
 import "../styles/globals.css";
 
@@ -20,6 +21,7 @@ const RootLayout: FC<Readonly<RootLayoutProps>> = ({ children }) => {
         className={cn("relative h-full font-sans antialiased", inter.className)}
       >
         <main className="relative flex min-h-screen flex-col">
+          <Navbar />
           <div className="flex-1 flex-grow">{children}</div>
         </main>
       </body>
