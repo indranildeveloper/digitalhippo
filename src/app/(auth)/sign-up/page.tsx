@@ -9,6 +9,7 @@ import { Button, buttonVariants } from "@/components/ui/Button";
 import { Label } from "@/components/ui/Label";
 import { Input } from "@/components/ui/Input";
 import { cn } from "@/lib/utils";
+import { trpc } from "@/trpc/client";
 import {
   AuthCredentialsValidator,
   TAuthCredentialsValidator,
@@ -22,6 +23,10 @@ const SignUpPage = () => {
   } = useForm<TAuthCredentialsValidator>({
     resolver: zodResolver(AuthCredentialsValidator),
   });
+
+  const { data } = trpc.anyApiRoute.useQuery();
+
+  console.log(data);
 
   const onSubmit = ({ email, password }: TAuthCredentialsValidator) => {
     // TODO)) send data to backend
