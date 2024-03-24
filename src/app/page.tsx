@@ -1,7 +1,7 @@
-import Container from "@/components/shared/Container";
 import Link from "next/link";
-import { Button, buttonVariants } from "@/components/ui/Button";
 import { ArrowDownToLine, ArrowRight, CheckCircle, Leaf } from "lucide-react";
+import Container from "@/components/shared/Container";
+import { Button, buttonVariants } from "@/components/ui/Button";
 
 const PERKS = [
   {

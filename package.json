@@ -13,7 +13,8 @@
     "prettier": "prettier \"**/*.+(json|ts|tsx)\"",
     "format:check": "npm run prettier -- --check",
     "format:fix": "npm run prettier -- --write",
-    "types:check": "tsc --noEmit --pretty"
+    "types:check": "tsc --noEmit --pretty",
+    "generate:types": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts payload generate:types"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
